@@ -1,0 +1,18 @@
+
+cc_prebuilt_library_shared {
+        name: "libmp3lame",
+        vendor: true,
+        compile_multilib: "64",
+        target: {
+            android_arm64: {
+                srcs: ["libs/aarch64/libmp3lame.so"],
+            },
+            android_x86_64: {
+                        srcs: ["libs/x86_64/libmp3lame.so"],
+                    }
+        },
+        strip: {
+            none:true,
+        },
+}
+
